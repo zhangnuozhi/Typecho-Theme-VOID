@@ -13,16 +13,12 @@ $setting = $GLOBALS['VOIDSetting'];
         <footer>
             <div class="container wide">
                 <section>
-                    <p>© <?php echo date('Y '); ?> <span class="brand"><?php echo $this->options->title; ?></span></p>
-                    <p>感谢陪伴：<span id="uptime"></span></p>
-                </section>
-                <section>
-                    <p>Powered by <a href="http://typecho.org/">Typecho</a> • <a href="https://blog.imalan.cn/archives/247/">Theme VOID</a></p>
-                    <p><?php echo $setting['footer']; ?></p>
+                    <p>©<span class="brand"><?php echo $this->options->title; ?></span> <?php echo date('Y '); ?> </p>
                 </section>
             </div>
         </footer>
 
+        <!--
         <!--侧边控制按钮-->
         <aside id="ctrler-panel">
             <div class="ctrler-item" id="go-top">
@@ -45,7 +41,9 @@ $setting = $GLOBALS['VOIDSetting'];
                 <a target="_self" href="javascript:void(0);" style="margin-left: -2px" onclick="TOC.toggle()"><i class="voidicon-left"></i></a>
             </div>
         </aside>
+        -->
 
+        <!--
         <!--站点设置面板-->
         <aside hidden id="setting-panel">
             <section>
@@ -100,6 +98,7 @@ $setting = $GLOBALS['VOIDSetting'];
                 <?php endif; ?> 
             </section> 
         </aside>
+        -->
 
         <?php if(!empty($setting['serviceworker'])): ?>
         <script>
