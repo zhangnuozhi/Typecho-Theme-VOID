@@ -1,7 +1,7 @@
 footer{
     @include bg;
     position: relative;
-    background-color: #000;
+    background-color: #FAFAFA;
     padding-bottom: 1.5rem;
     .container{
         display: flex;
@@ -16,13 +16,13 @@ footer{
                 text-align: right;
             }
             &,& *{
-                color: #ddd;
+                color: #000;
                 .theme-dark &{
                     *{
                         color: $td-textColor;
                     }
                 }
-                font-weight: 300;
+                font-weight: 350;
                 text-align: center;
             }
             p{
