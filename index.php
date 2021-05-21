@@ -2,11 +2,13 @@
 /**
  * VOID：无类型
  * 
- * 作者：<a href="https://www.imalan.cn">熊猫小A</a>
+ * 原作者：<a href="https://www.imalan.cn">熊猫小A</a>
+ * 
+ * 自定义修改版本
  * 
  * @package     Typecho-Theme-VOID
  * @author      熊猫小A
- * @version     3.5.1
+ * @version     nuozhi0521
  * @link        https://blog.imalan.cn/archives/247/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
