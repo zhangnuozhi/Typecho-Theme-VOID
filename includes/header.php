@@ -53,7 +53,9 @@ if($this->is('post') || $this->is('page')) {
                 <a role=button aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
                     <span></span>
                 </a>
-                <a class="brand" href="<?php Utils::index(''); ?>"><?php if($setting['name']) echo $setting['name']; else echo $this->options->title; ?></a>
+                <a class="brand" href="<?php Utils::index(''); ?>">
+                    <img href = "https://zhangnuozhi.com/assets/img/logo.svg" alt="<?php if($setting['name']) echo $setting['name']; else echo $this->options->title; ?>">
+                </a>
                 <a href="<?php Utils::index(''); ?>">首页</a>
                 <?php $this->widget('Widget_Contents_Page_List')->parse('<a href="{permalink}">{title}</a>'); ?>
                 <span class="dropdown">分类
