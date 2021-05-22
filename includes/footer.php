@@ -13,7 +13,8 @@ $setting = $GLOBALS['VOIDSetting'];
         <footer>
             <div class="container wide">
                 <section>
-                    <p>©<span class="brand"><?php echo $this->options->title; ?></span> <?php echo date('Y '); ?> </p>
+                    <p>© <?php echo $this->options->title; ?> <?php echo date('Y '); ?> <span class="brand"></span></p>
+                    // © YYYY brandname
                 </section>
             </div>
         </footer>
