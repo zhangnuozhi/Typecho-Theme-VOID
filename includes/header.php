@@ -54,7 +54,7 @@ if($this->is('post') || $this->is('page')) {
                     <span></span>
                 </a>
                 <a class="brand" href="<?php Utils::index(''); ?>">
-                    <img href = "https://zhangnuozhi.com/assets/img/logo.svg" alt="<?php if($setting['name']) echo $setting['name']; else echo $this->options->title; ?>">
+                    <img src="https://zhangnuozhi.com/assets/img/logo.svg" alt="<?php if($setting['name']) echo $setting['name']; else echo $this->options->title; ?>" style="width: 45px;">
                 </a>
                 <a href="<?php Utils::index(''); ?>">首页</a>
                 <?php $this->widget('Widget_Contents_Page_List')->parse('<a href="{permalink}">{title}</a>'); ?>
