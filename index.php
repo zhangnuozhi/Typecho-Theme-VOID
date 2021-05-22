@@ -66,13 +66,6 @@ if(!Utils::isPjax()){
                             <?php endif; ?>
                             <?php endif; ?>
                             <div class="content-wrap">
-                                <div class="post-meta-index">
-                                    <time datetime="<?php echo date('c', $this->created); ?>"><?php echo date('M d, Y', $this->created); ?></time>
-                                    <?php if($setting['VOIDPlugin']): ?>
-                                        <span class="word-count">+ <?php echo $this->wordCount; ?> 字</span>
-                                    <?php endif; ?>
-                                </div>
-
                                 <?php if($this->fields->showfullcontent == '1'): ?>
                                     <a href="<?php $this->permalink(); ?>">
                                 <?php endif; ?>
@@ -82,6 +75,12 @@ if(!Utils::isPjax()){
                                 <?php endif; ?>
                                 
                                 <?php if($this->fields->excerpt != '') echo "<p class=\"headline content\">{$this->fields->excerpt}</p>"; ?>
+                                <div class="post-meta-index">
+                                    <time datetime="<?php echo date('c', $this->created); ?>"><?php echo date('M d, Y', $this->created); ?></time>
+                                    <?php if($setting['VOIDPlugin']): ?>
+                                        <span class="word-count">+ <?php echo $this->wordCount; ?> 字</span>
+                                    <?php endif; ?>
+                                </div>
 
                                 <div class="articleBody">
                                 <?php if($this->fields->showfullcontent != '1'): ?>
