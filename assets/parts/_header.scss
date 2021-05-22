@@ -1,27 +1,27 @@
 header{
     z-index: 3;
-    position: fixed;
+    position: absolute;
     &.header-mode-2 {
         position: absolute;
     }
     top: 0;
     left: 0;
     width: 100%;
-    transition: $animationTime-slow $animationTimingFunc all;
-    &.headroom--pinned{
-        transform: translateY(0);
-    }
-    &.headroom--unpinned{
-        transform: translateY(-80px);
-    }
+//     transition: $animationTime-slow $animationTimingFunc all;
+//     &.headroom--pinned{
+//         transform: translateY(0);
+//     }
+//     &.headroom--unpinned{
+//         transform: translateY(-80px);
+//     }
 
     /* fallback 时为深色底浅色字 */
-    background-color: $headerBgColor;
-    color: $headerTextColor;
-    @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-        background-color: $headerBgColor-blur;
-        backdrop-filter: blur(10px);
-    }
+    background-color: transparent;
+    color: #ffffff;
+//     @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
+//         background-color: $headerBgColor-blur;
+//         backdrop-filter: blur(10px);
+//     }
     .container{
         height: 58px;
         @media screen and (max-width:767px)  {
@@ -242,9 +242,9 @@ header{
         }
     }
     &.pull-up {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-        .container nav span.dropdown ul {
-            box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.7);
+//         box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+//         .container nav span.dropdown ul {
+//             box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.7);
         }
     }
 }
@@ -253,17 +253,17 @@ body:not(.theme-dark) header {
     &.force-dark, &.pull-up {
         /* 强制深色，防止在浅色背景下表现差劲 */
         @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-            background: rgba(0, 0, 0, 0.86)
+            background: #d0d8e1
         }
         .container .dropdown ul {
-            background: rgba(0, 0, 0, 0.86)
+            background: #d0d8e1
         }
     }
 }
 
 
 #nav-mobile{
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
