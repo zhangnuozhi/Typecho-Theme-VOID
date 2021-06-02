@@ -8,6 +8,7 @@ main{
     }
     .lazy-wrap{
         width: 100%;
+        height: 450px;
         overflow: hidden;
         padding-top: 58px;
         display: flex;
@@ -16,7 +17,7 @@ main{
         }
         position: relative;
         &:not(.no-banner){
-            background-color: #12121c;
+            background-color: #b2bbc9;
         }
         #banner{
             position: absolute;
