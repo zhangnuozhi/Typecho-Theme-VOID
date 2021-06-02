@@ -294,7 +294,7 @@ section#index-list{
                 }
                 &:not(.style-2) {
                     border: none;
-                    box-shadow: 0 3px 5px rgb(0 0 0 / 15%)
+                    box-shadow: 0 3px 5px rgba(0, 0, 0, .15);
                     .theme-dark & {
                         border-color: $td-borderColor;
                     }
