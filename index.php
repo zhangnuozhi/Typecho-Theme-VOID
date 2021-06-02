@@ -1,16 +1,14 @@
 <?php
 /**
- * VOID：无类型
+ * 自定义修改版本
  * 
  * 原作者：<a href="https://www.imalan.cn">熊猫小A</a>
  * 
- * 自定义修改版本
- * 
- * @package     Typecho-Theme-VOID
- * @author      熊猫小A
- * @version     nuozhi0521
- * @link        https://blog.imalan.cn/archives/247/
+ * @package     Typecho-Theme-VOID-nuozhi
+ * @author      张诺志
+ * @version     nuozhi0602
  */
+
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting']; 
 
