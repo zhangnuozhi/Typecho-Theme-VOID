@@ -50,7 +50,7 @@ if($this->is('post') || $this->is('page')) {
     <header class="header-mode-<?php echo $setting['headerMode']; ?> <?php if(empty($banner)) echo 'force-dark no-banner'; ?>">
         <div class="container wider">
             <nav>
-                <a role=button aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
+                <a role=button id="toggle-menu" aria-label="展开导航" class="toggle" target="_self" href="javascript:void(0);" onclick="VOID_Ui.toggleNav(this);">
                     <span></span>
                 </a>
                 <a class="brand" href="<?php Utils::index(''); ?>">
@@ -80,13 +80,7 @@ if($this->is('post') || $this->is('page')) {
                         <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search" required />
                     </span>
                 <?php endif; ?>
-                <a <?php if(Utils::isPluginAvailable('ExSearch')) echo 'class="search-form-input" style="display:flex"'; ?> 
-                    role=button aria-label="展开搜索" id="toggle-mobile-search" target="_self" 
-                    href="javascript:void(0);" 
-                    onclick="<?php if(!Utils::isPluginAvailable('ExSearch')) echo 'VOID_Ui.toggleSearch(this);'; ?>">
-                    <i class="voidicon-search"></i>
-                </a>
-                <a target="_self" href="javascript:void(0);" id="toggle-setting" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
+
             </nav>
         </div>
         <div class="mobile-search-form">

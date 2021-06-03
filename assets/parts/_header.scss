@@ -93,13 +93,13 @@ header{
                     &:not(.brand){
                         display: none;
                     }
-                    &.toggle{
-                        display: flex;
-                        position: absolute;
-                        left: 1rem;
-                        @media screen and (max-width: 767px) {
-                            left: 0;
-                        }
+                    // &.toggle{
+                    //     display: flex;
+                    //     position: absolute;
+                    //     left: 1rem;
+                    //     @media screen and (max-width: 767px) {
+                    //         left: 0;
+                    //     }
                     }
                     &#toggle-setting {
                         display: flex;
@@ -179,7 +179,7 @@ header{
                 }
             }
 
-            #toggle-mobile-search{
+            #toggle-menu{
                 display: none;
                 position: absolute;
                 right: -0.55rem;
