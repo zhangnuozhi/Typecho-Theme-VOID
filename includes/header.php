@@ -96,14 +96,23 @@ if($this->is('post') || $this->is('page')) {
         </div>
     </header>
     <div id="nav-mobile">
-        <section id="pages" data-title="PAGES">
+        <section id="pages" data-title="页面">
             <nav>
                 <?php $this->widget('Widget_Contents_Page_List')->parse('<a href="{permalink}">{title}</a>'); ?>
             </nav>
         </section>
-        <section id="categories" data-title="CATEGORIES">
+        <section id="categories" data-title="分类">
             <nav>
                 <?php $this->widget('Widget_Metas_Category_List')->parse('<a href="{permalink}">{name}</a>'); ?>
+            </nav>
+        </section>
+        <section id="search" data-title="搜索">
+            <nav>
+                <div class="mobile-search-form">
+                    <!-- <label for="search_new">搜索</label> -->
+                    <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search_new" required placeholder="输入内容然后 Go!" />
+                    <button onclick="VOID.startSearch('#search_new');">搜索</button>
+                </div>
             </nav>
         </section>
         <?php if($setting['nav']){ foreach ($setting['nav'] as $listItem): ?>
