@@ -265,7 +265,7 @@ body:not(.theme-dark) header {
 #nav-mobile{
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     top: 0;
