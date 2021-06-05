@@ -188,7 +188,7 @@ class Utils
         $created = round((time()- $archive->created) / 3600 / 24);
         $updated = round((time()- $archive->modified) / 3600 / 24);
 
-        return array("is" => $created > 90,
+        return array("is" => $created > 120, // 3 months (120 days)
                     "created" => $created,
                     "updated" => $updated);
     }
