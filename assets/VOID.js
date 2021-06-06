@@ -303,7 +303,7 @@ var VOID_Vote = {
         // 首先检查本地 cookie
         if (voted.indexOf(',' + id + ',') != -1) {
             $(item).addClass('done');
-            VOID.alert('您已经投过票了~');
+            VOID.alert('已投票');
             return;
         }
 
@@ -313,7 +313,7 @@ var VOID_Vote = {
             if (type == 'up') type_2 = 'down';
             else type_2 = 'up';
             if (VOID_Vote.checkVoted(type_2, id, table)) {
-                VOID.alert('暂不支持更改投票哦～');
+                VOID.alert('不能更改投票');
                 return;
             }
         }
@@ -339,17 +339,17 @@ var VOID_Vote = {
                     $(item).find('.value').text(prev + 1);
                     break;
                 case 302:
-                    VOID.alert('您好像已经投过票了呢～');
+                    VOID.alert('已投票');
                     break;
                 case 403:
-                    VOID.alert('暂不支持更改投票哦～');
+                    VOID.alert('不能更改投票');
                     break;
                 default:
                     break;
                 }
             },
             error: function () {
-                VOID.alert('投票失败 o(╥﹏╥)o，请稍后重试');
+                VOID.alert('投票失败');
             }
         });
     },
@@ -512,7 +512,7 @@ var AjaxComment = {
                 type: $(AjaxComment.commentForm).attr('method'),
                 data: $(AjaxComment.commentForm).serializeArray(),
                 error: function () {
-                    VOID.alert('提交失败！请重试。');
+                    VOID.alert('提交失败');
                     $(AjaxComment.submitBtn).html('提交评论');
                     AjaxComment.err();
                     return false;
@@ -532,7 +532,7 @@ var AjaxComment = {
 
                             if ($('.pager .prev').length && AjaxComment.parentID == '') {
                                 // 在分页对文章发表评论，无法取得最新评论内容
-                                VOID.alert('评论成功！请回到评论第一页查看。');
+                                VOID.alert('评论成功');
                                 AjaxComment.newID = '';
                                 AjaxComment.parentID = '';
                                 AjaxComment.finish();
@@ -551,7 +551,7 @@ var AjaxComment = {
                             if (AjaxComment.parentID == '') {
                                 // 无父 id，直接对文章评论，插入到第一个 comment-list 头部
                                 $('#comments>.comment-list').prepend(newCommentData);
-                                VOID.alert('评论成功！');
+                                VOID.alert('评论成功');
                                 AjaxComment.finish();
                                 AjaxComment.newID = '';
                                 return false;
@@ -571,7 +571,7 @@ var AjaxComment = {
                                     // 父评论是子评论，与父评论平级，并放在后面
                                     $('#' + AjaxComment.parentID).after(newCommentData);
                                 }
-                                VOID.alert('评论成功！');
+                                VOID.alert('评论成功');
                                 AjaxComment.finish();
                                 AjaxComment.parentID = '';
                                 AjaxComment.newID = '';
