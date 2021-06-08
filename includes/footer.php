@@ -14,6 +14,7 @@ $setting = $GLOBALS['VOIDSetting'];
             <div class="container wide">
                 <section>
                     <p>© <?php echo date('Y '); ?> <span class="brand"><?php echo $this->options->title; ?></span></p>
+                    <p>© <?php echo date('Y '); ?> 张诺志</p>
                 <!-- © YYYY brandname -->
                 </section>
             </div>
