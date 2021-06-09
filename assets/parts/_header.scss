@@ -253,10 +253,10 @@ body:not(.theme-dark) header {
     &.force-dark, &.pull-up {
         /* 透明 */
         @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-            background: 
+            background: rgba(0, 0, 0, 0)
         }
         .container .dropdown ul {
-            background: 
+            background: rgba(0, 0, 0, 0)
         }
     }
 }

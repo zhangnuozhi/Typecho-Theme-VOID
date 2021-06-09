@@ -301,13 +301,13 @@ VOID_Ui = {
 
         if (up) {
             if (current >= 5) {
-                VOID.alert('已经是最大了！');
+                VOID.alert('最大字体');
                 return;
             }
             $('body').attr('fontsize', String(current + 1));
         } else {
             if (current <= 1) {
-                VOID.alert('已经是最小了！');
+                VOID.alert('最小字体');
                 return;
             }
             $('body').attr('fontsize', String(current - 1));
@@ -330,7 +330,7 @@ VOID_Ui = {
                     $('#loggin-form').removeClass('need-refresh');
                 },
                 error: function () {
-                    VOID.alert('请求登陆参数错误。请在刷新后尝试登陆。');
+                    VOID.alert('登录错误');
                     setTimeout(function () {
                         location.reload();
                     }, 1000);
@@ -440,7 +440,7 @@ VOID_Ui = {
                 document.body.classList.add('theme-dark');
                 var night = VOID_Util.getCookie('theme_dark');
                 if (night != '1') {
-                    VOID.alert('已为您开启深色模式。');
+                    VOID.alert('深色模式已开启');
                 }
                 VOID_Util.setCookie('theme_dark', '1', 7200);
             } else { // 自动模式，定时            
@@ -468,7 +468,7 @@ VOID_Ui = {
                         var toSunrise = (sunrise.getTime() - current.getTime()) / 1000;
                         // 设置 cookie
                         VOID_Util.setCookie('theme_dark', '1', parseInt(toSunrise));
-                        VOID.alert('日落了，夜间模式已开启。');
+                        VOID.alert('深色模式已开启');
                     } else {
                         document.body.classList.remove('theme-dark');
                     }
