@@ -251,12 +251,12 @@ header{
 
 body:not(.theme-dark) header {
     &.force-dark, &.pull-up {
-        /* 强制深色，防止在浅色背景下表现差劲 */
+        /* 透明 */
         @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-            background: #d0d8e1
+            background: 
         }
         .container .dropdown ul {
-            background: #d0d8e1
+            background: 
         }
     }
 }

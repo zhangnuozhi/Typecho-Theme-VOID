@@ -17,7 +17,7 @@ main{
         }
         position: relative;
         &:not(.no-banner){
-            background-color: #b2bbc9;
+            background-color: #b0bbcb;
         }
         #banner{
             position: absolute;
@@ -144,7 +144,7 @@ main{
                 min-height: 0;
                 padding-bottom: 25px;
                 &,& *{
-                    color: #333;
+                    color: #fff;
                 }
                 & a{
                     border-bottom: 1px solid rgba(0,0,0,0.1);
