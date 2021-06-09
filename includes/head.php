@@ -99,7 +99,7 @@ if (isset($_POST['void_action'])) {
 
         <?php if(!empty($setting['mobileBannerHeight'])): ?>
         @media screen and (max-width: 768px){
-            main>.lazy-wrap{min-height: <?php echo $setting['mobileBannerHeight']; ?>vh;}
+            main>.lazy-wrap{min-height: <?php echo $setting['mobileBannerHeight']; ?>vh; background-color: #b2bbc9;}
         }
         <?php endif; ?>
     </style>
