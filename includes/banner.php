@@ -45,10 +45,10 @@ if($this->is('post') || $this->is('page')) {
                 <?php else: ?>
                     <?php if ($this->have()): ?>
                         <?php $this->archiveTitle(array(
-                            'category'  =>  _t('分类 "%s" 下的文章'),
-                            'search'    =>  _t('包含关键字 "%s" 的文章'),
-                            'tag'       =>  _t('包含标签 "%s" 的文章'),
-                            'author'    =>  _t('"%s" 发布的文章')
+                            'category'  =>  _t('分类："%s"'),
+                            'search'    =>  _t('关键字："%s"'),
+                            'tag'       =>  _t('标签："%s"'),
+                            'author'    =>  _t('作者："%s"')
                         ), '', '');  ?>
                     <?php else: ?>
                         <span class="glitch">0</span>
